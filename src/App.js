@@ -14,7 +14,10 @@ import {
 } from "reactstrap";
 
 const data = [
-  
+  {id: 1, persona: "Exequiel", edad: "34"},
+  {id: 2, persona: "Soledad", edad: "34"},
+  {id: 3, persona: "Laura", edad: "34"},
+  {id: 4, persona: "Fernando", edad: "34"},
 ];
 
 export default App;
