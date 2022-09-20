@@ -1,31 +1,12 @@
-import React, { Component, Suspense } from 'react';
-import { render } from 'react-dom';
-import './style.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-import {
-  FirebaseAppProvider
-} from 'reactfire';
+ReactDOM.render(<App />, document.getElementById('root'));
 
-import firebaseConfig from './firebaseConfig';
-
-import 'firebase/performance';
-
-import List from './list';
-
-class App extends Component {
-
-  render() {
-    return (
-      <FirebaseAppProvider firebaseConfig={ firebaseConfig }>
-        <Suspense fallback={<p>Cargando...</p>} traceId={'load-app-trace'}>
-          <List />
-        </Suspense>
-      </FirebaseAppProvider>      
-    );
-  }
-}
-
-render(
-  <App />,
-  document.getElementById('root')
-);
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
