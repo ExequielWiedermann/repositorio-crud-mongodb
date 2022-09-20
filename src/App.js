@@ -20,4 +20,8 @@ const data = [
   {id: 4, persona: "Fernando", edad: "34"},
 ];
 
+class App extends React.Component{
+
+}
+
 export default App;

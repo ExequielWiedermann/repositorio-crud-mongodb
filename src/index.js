@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { Component, Suspense } from 'react';
+import { render } from 'react-dom';
+import './style.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+import {
+  FirebaseAppProvider
+} from 'reactfire';
+
+import firebaseConfig from './firebaseConfig';
+
+import 'firebase/performance';
+
+import List from './list';
+
+class App extends Component {
+
+  render() {
+    return (
+      <FirebaseAppProvider firebaseConfig={ firebaseConfig }>
+        <Suspense fallback={<p>Cargando...</p>} traceId={'load-app-trace'}>
+          <List />
+        </Suspense>
+      </FirebaseAppProvider>      
+    );
+  }
+}
+
+render(
+  <App />,
+  document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
