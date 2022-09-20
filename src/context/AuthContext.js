@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import app from "../firebaseConfig";
+import app from "../FirebaseConfig";
 import Cargando from '../components/Cargando'
 
 export const Auth = React.createContext();

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Icon, Input, Button } from "antd";
-import app from "../firebaseConfig";
+import app from "../FirebaseConfig";
 import { withRouter } from "react-router";
 import Errores from "../components/Errores";
 
