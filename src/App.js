@@ -1,27 +1,26 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  Table,
-  Button,
-  Container,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  FormGroup,
-  ModalFooter,
-} from "reactstrap";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Dashboard from "./views/Dashboard";
+import Login from "./views/Login";
+import Error from "./views/Error";
+import { AuthContext } from "./context/AuthContext";
 
-const data = [
-  {id: 1, persona: "Exequiel", edad: "34"},
-  {id: 2, persona: "Soledad", edad: "34"},
-  {id: 3, persona: "Laura", edad: "34"},
-  {id: 4, persona: "Fernando", edad: "34"},
-];
-
-class App extends React.Component{
-
-}
+const App = () => (
+    <AuthContext>
+        <Router>
+            <Switch>
+                <Route exact path="/login">
+                    <Login />
+                </Route>
+                <Route exact path="/">
+                    <Dashboard />
+                </Route>
+                <Route path="*">
+                    <Error />
+                </Route>
+            </Switch>
+        </Router>
+    </AuthContext>
+);
 
 export default App;
