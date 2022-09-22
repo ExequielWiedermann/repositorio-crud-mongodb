@@ -4,7 +4,7 @@ import { Form, Icon, Input, Button } from "antd";
 import Signup from "./Signup";
 import { withRouter } from "react-router";
 import * as firebase from "firebase/app";
-import app from "../FirebaseConfig";
+import app from "../firebaseConfig";
 import { Auth } from "../context/AuthContext";
 import Errores from '../components/Errores'
 

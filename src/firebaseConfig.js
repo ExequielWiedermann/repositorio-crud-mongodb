@@ -4,14 +4,13 @@ import "firebase/auth";
 
 const app = firebase.initializeApp(
     {
-        apiKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        authDomain: "XXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        databaseURL: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        projectId: "XXXXXXXXXXXXXXXX",
-        storageBucket: "XXXXXXXXXXXXXXXXXXXXXXXXX",
-        messagingSenderId: "XXXXXXXXXXXXXXXXXXXX",
-        appId: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        measurementId: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        apiKey: "AIzaSyCsP9MkviNSB6Pcwu2eVQYtPnxyp4-CJkg",
+        authDomain: "prueba-sexto-segunda.firebaseapp.com",
+        projectId: "prueba-sexto-segunda",
+        storageBucket: "prueba-sexto-segunda.appspot.com",
+        messagingSenderId: "401886981644",
+        appId: "1:401886981644:web:df1250b573415e7f6b8829",
+        measurementId: "G-7DSYPB65F6"
     }
 );
 
